@@ -10,7 +10,7 @@
   - Always prefer using a class over HTML tags (with some exceptions like CSS resets)
 - Don't use ids in selectors
   - `#header` is overly specific compared to, for example `.header` and is much harder to override
-  - Read more about the headaches associated with IDs in CSS here.
+  - Read more about the headaches associated with IDs in CSS [here](http://csswizardry.com/2011/09/when-using-ids-can-be-a-pain-in-the-class/).
 - Don’t nest more than 3 levels deep
   - Nesting selectors increases specificity, meaning that overriding any CSS set therein needs to be targeted with an even more specific selector. This quickly becomes a significant maintenance issue.
 - Avoid using nesting for anything other than pseudo selectors and state selectors.
@@ -20,7 +20,7 @@
   - If you must, leave a comment, and prioritise resolving specificity issues before resorting to `!important`.
   - `!important` greatly increases the power of a CSS rule, making it extremely tough to override in the future. It’s only possible to override with another `!important` rule later in the cascade.
 - Don’t use `margin-top`.
-  - Vertical margins collapse. Always prefer `padding-top` or`margin-bottom` on preceding elements
+  - Vertical margins [collapse](https://developer.mozilla.org/en-US/docs/Web/CSS/margin_collapsing). Always prefer `padding-top` or`margin-bottom` on preceding elements
 - Avoid shorthand properties (unless you really need them)
   - It can be tempting to use, for instance, `background: #fff` instead of `background-color: #fff`, but doing so overrides other values encapsulated by the shorthand property. (In this case, `background-image` and its associative properties are set to “none.”
   - This applies to all properties with a shorthand: border, margin, padding, font, etc.
@@ -234,7 +234,7 @@ Choose your modifiers wisely. These two rules have very different meaning:
 
 ## Selector Naming
 
-- Try to use BEM-based naming for your class selectors
+- Try to use [BEM-based](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) naming for your class selectors
   - When using modifier classes, always require the base/unmodified class is present
 - Use Sass’s nesting to manage BEM selectors like so:
   ```scss
@@ -262,7 +262,7 @@ There are a few reserved namespaces for classes to provide common and globally-a
 - `.o-` for CSS objects. Objects are usually common design patterns (like the Flag object). Modifying these classes could have severe knock-on effects.
 - `.c-` for CSS components. Components are designed pieces of UI—think buttons, inputs, modals, and banners.
 - `.u-` for helpers and utilities. Utility classes are usually single-purpose and have high priority. Things like floating elements, trimming margins, etc.
-- `.is-, .has-` for stateful classes, a la SMACSS. Use these classes for temporary, optional, or short-lived states and styles.
+- `.is-, .has-` for stateful classes, a la [SMACSS](https://smacss.com/book/type-state). Use these classes for temporary, optional, or short-lived states and styles.
 - `._` for hacks. Classes with a hack namespace should be used when you need to force a style with `!important` or increasing specificity, should be temporary, and should not be bound onto.
 - `.t-` for theme classes. Pages with unique styles or overrides for any objects or components should make use of theme classes.
 
