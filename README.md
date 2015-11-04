@@ -75,10 +75,12 @@ $DBmodal-background: #fff !default;
 $DBmodal-background-alt: color(gray, x-light) !default;
 
 .o-modal { ... }
+
 // Many lines later...
-// EXPERIMENT: gandalf-rule-name
+
+// EXPERIMENT: experiment-rule-name
 .o-modal--experiment { ... }
-// END EXPERIMENT: gandalf-rule-name
+// END EXPERIMENT: experiment-rule-name
 ```
 
 ### Variables
@@ -115,12 +117,13 @@ Example:
 
 ### Experiments
 
-- Wrap experiment styles with comments:
-  ```scss
-  // EXPERIMENT: gandalf-rule-name
-  .stuff { ... }
-  // END EXPERIMENT: gandalf-rule-name
-  ```
+Wrap experiment styles with comments:
+
+```scss
+// EXPERIMENT: experiment-rule-name
+.stuff { ... }
+// END EXPERIMENT: experiment-rule-name
+```
 
 ----------
 
@@ -201,18 +204,16 @@ Nesting can be really easily avoided by smart class naming (with the help of BEM
 ## BEM
 
 Block: Unique, meaningful names for a logical unit of style. Avoid excessive shorthand.
-    Good: ".alert-box" or ".expanding-section" or ".button"
-    Bad: ".feature" or ".content" or ".btn"
+- Good: `.alert-box` or `.recents-intro` or `.button`
+- Bad: `.feature` or `.content` or `.btn`
 
-Element: styles that only apply to children of a block. Elements can also be blocks themselves. Class name is a concatenation of the block name, two underscores and the element name.
-    Examples:
-    ".alert-box__close"
-    ".expanding-section__section"
+Element: styles that only apply to children of a block. Elements can also be blocks themselves. Class name is a concatenation of the block name, two underscores and the element name. Examples:
+- `.alert-box__close`
+- `.expanding-section__section`
 
-Modifier: override or extend the base styles of a block or element with modifier styles. Class name is a concatenation of the block (or element) name, two hyphens and the modifier name.
-    Examples:
-    ".alert-box--success"
-    ".expanding-section--expanded"
+Modifier: override or extend the base styles of a block or element with modifier styles. Class name is a concatenation of the block (or element) name, two hyphens and the modifier name. Examples:
+- `.alert-box--success`
+- `.expanding-section--expanded`
 
 ### BEM Best practices
 
@@ -329,7 +330,7 @@ $SCREEN_SM_MAX: "max-width: 767px";
 .selector {
       float: left;
 
-      @media only screen and ($SMALL_BELOW) {
+      @media only screen and ($SCREEN_SM_MAX) {
         float: none;
       }
 }
