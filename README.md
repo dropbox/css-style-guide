@@ -20,7 +20,7 @@
   - If you must, leave a comment, and prioritise resolving specificity issues before resorting to `!important`.
   - `!important` greatly increases the power of a CSS rule, making it extremely tough to override in the future. It’s only possible to override with another `!important` rule later in the cascade.
 - Don’t use `margin-top`.
-  - Vertical margins [collapse](https://developer.mozilla.org/en-US/docs/Web/CSS/margin_collapsing). Always prefer `padding-top` or`margin-bottom` on preceding elements
+  - Vertical margins [collapse](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing). Always prefer `padding-top` or`margin-bottom` on preceding elements
 - Avoid shorthand properties (unless you really need them)
   - It can be tempting to use, for instance, `background: #fff` instead of `background-color: #fff`, but doing so overrides other values encapsulated by the shorthand property. (In this case, `background-image` and its associative properties are set to “none.”
   - This applies to all properties with a shorthand: border, margin, padding, font, etc.
