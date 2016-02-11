@@ -18,7 +18,7 @@
 - Don't `!important`
   - Ever.
   - If you must, leave a comment, and prioritise resolving specificity issues before resorting to `!important`.
-  - `!important` greatly increases the power of a CSS property, making it extremely tough to override in the future. It’s only possible to override with another `!important` property later in the cascade.
+  - `!important` greatly increases the power of a CSS declaration, making it extremely tough to override in the future. It’s only possible to override with another `!important` declaration later in the cascade.
 - Don’t use `margin-top`.
   - Vertical margins [collapse](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing). Always prefer `padding-top` or`margin-bottom` on preceding elements
 - Avoid shorthand properties (unless you really need them)
