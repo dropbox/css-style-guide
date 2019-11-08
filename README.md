@@ -335,3 +335,9 @@ $SCREEN_SM_MAX: "max-width: 767px";
       }
 }
 ```
+
+## Translation
+
+  This style guide is also available in other languages:
+
+  - ![cn](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/China.png) **Chinese (Simplified)**: [Gabriel/css-style-guide](./Translation/README-zh.md)
